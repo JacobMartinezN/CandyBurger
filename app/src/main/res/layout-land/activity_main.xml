@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintGeneral"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.artur.candyburger.MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/Card2"
+        android:layout_width="553dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/ConstraintCard2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/ImageFacebook"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/facebooklogo"
+                app:layout_constraintLeft_toLeftOf="@id/ConstraintCard2"
+                app:layout_constraintRight_toLeftOf="@id/ImageInstagram"
+
+
+                 />
+
+            <ImageView
+                android:id="@+id/ImageInstagram"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/instagramlogo"
+                app:layout_constraintLeft_toRightOf="@id/ImageFacebook"
+                app:layout_constraintRight_toLeftOf="@id/ImageWhatsapp"
+
+                />
+
+            <ImageView
+                android:id="@+id/ImageWhatsapp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/whatsapplogo"
+                app:layout_constraintLeft_toRightOf="@id/ImageInstagram"
+                app:layout_constraintRight_toRightOf="@id/ConstraintCard2"
+
+                />
+
+            <TextView
+                android:id="@+id/TextFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CandyBurger"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@id/ConstraintCard2" />
+
+            <TextView
+                android:id="@+id/TextInstagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CandyBurger08"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                />
+
+            <TextView
+                android:id="@+id/TextWhatsapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="971160000"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                 />
+
+            <TextView
+                android:id="@+id/TextContacto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contacto"
+                android:textSize="24sp"
+                android:textStyle="italic"
+                />
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

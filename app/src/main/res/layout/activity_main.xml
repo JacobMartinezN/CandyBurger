@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.artur.candyburger.MainActivity"
+    android:id="@+id/ConstraintGeneral">
+
+    <android.support.constraint.ConstraintLayout
+
+        android:id="@+id/ConstraintCabecera"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/cardview_dark_background"
+        app:layout_constraintBottom_toTopOf="@id/ConstrainCards"
+        app:layout_constraintRight_toRightOf="@id/ConstraintGeneral"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/ImageHamburguesas"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hamburguesas" />
+
+        <ImageView
+            android:id="@+id/ImageLogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:paddingLeft="8sp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/TextCandy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingRight="16dp"
+            android:text="Candy Burger"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@id/ImageHamburguesas"
+            app:layout_constraintRight_toRightOf="@id/ImageHamburguesas"
+
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ConstrainCards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ConstraintCabecera"
+        app:layout_constraintBottom_toBottomOf="@id/ConstraintGeneral"
+        >
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+            android:id="@+id/Card1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="6dp"
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:layout_constraintBottom_toTopOf="@id/Card2"
+            card_view:layout_constraintEnd_toEndOf="parent"
+
+            card_view:layout_constraintTop_toTopOf="@id/ConstrainCards">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ConstraintCard1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/HamburguesaAnimada"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/burgeranimada"
+                    card_view:layout_constraintBottom_toBottomOf="@id/ConstraintCard1"
+                    card_view:layout_constraintLeft_toLeftOf="@id/ConstraintCard1"
+                    card_view:layout_constraintRight_toLeftOf="@id/TextViewPresentacion"
+                    card_view:layout_constraintTop_toBottomOf="@id/TextViewNombre"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/TextViewNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginEnd="115dp"
+                    android:layout_marginStart="118dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Candy Burger"
+                    android:textSize="24sp"
+                    android:textStyle="italic"
+                    card_view:layout_constraintBottom_toTopOf="@+id/TextViewPresentacion"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/TextViewPresentacion"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Aquí comerás las hamburguesas, broasters y salchipapas mas ricas de todo Lima!!"
+                    android:textSize="16sp"
+                    card_view:layout_constraintBottom_toBottomOf="@id/ConstraintCard1"
+                    card_view:layout_constraintLeft_toRightOf="@id/HamburguesaAnimada"
+                    card_view:layout_constraintRight_toRightOf="@id/ConstraintCard1"
+                    card_view:layout_constraintTop_toBottomOf="@id/TextViewNombre"
+                    card_view:layout_constraintVertical_bias="0.5" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/Card2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="6dp"
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:layout_constraintBottom_toTopOf="@id/Card3"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@id/Card1">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ConstraintCard2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/ImageFacebook"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/facebooklogo"
+                    card_view:layout_constraintBottom_toTopOf="@id/TextFacebook"
+                    card_view:layout_constraintLeft_toLeftOf="@id/ConstraintCard2"
+                    card_view:layout_constraintRight_toLeftOf="@+id/ImageInstagram"
+                    card_view:layout_constraintTop_toBottomOf="@id/TextContacto" />
+
+                <ImageView
+                    android:id="@+id/ImageInstagram"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/instagramlogo"
+                    card_view:layout_constraintBottom_toTopOf="@id/TextInstagram"
+                    card_view:layout_constraintLeft_toRightOf="@id/ImageFacebook"
+                    card_view:layout_constraintRight_toLeftOf="@id/ImageWhatsapp"
+                    card_view:layout_constraintTop_toBottomOf="@id/TextContacto" />
+
+                <ImageView
+                    android:id="@+id/ImageWhatsapp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/whatsapplogo"
+                    card_view:layout_constraintBottom_toTopOf="@id/TextWhatsapp"
+                    card_view:layout_constraintLeft_toRightOf="@id/ImageInstagram"
+                    card_view:layout_constraintRight_toRightOf="@id/ConstraintCard2"
+                    card_view:layout_constraintTop_toBottomOf="@id/TextContacto" />
+
+                <TextView
+                    android:id="@+id/TextFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CandyBurger"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    card_view:layout_constraintBottom_toBottomOf="@id/ConstraintCard2"
+                    card_view:layout_constraintLeft_toLeftOf="@id/ConstraintCard2"
+                    card_view:layout_constraintRight_toLeftOf="@id/ImageInstagram"
+                    card_view:layout_constraintTop_toBottomOf="@id/ImageFacebook" />
+
+                <TextView
+                    android:id="@+id/TextInstagram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CandyBurger08"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    card_view:layout_constraintBottom_toBottomOf="@id/ConstraintCard2"
+                    card_view:layout_constraintLeft_toRightOf="@id/ImageFacebook"
+                    card_view:layout_constraintRight_toLeftOf="@id/ImageWhatsapp"
+                    card_view:layout_constraintTop_toBottomOf="@id/ImageInstagram" />
+
+                <TextView
+                    android:id="@+id/TextWhatsapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="971160000"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    card_view:layout_constraintBottom_toBottomOf="@id/ConstraintCard2"
+                    card_view:layout_constraintLeft_toRightOf="@id/ImageInstagram"
+                    card_view:layout_constraintRight_toRightOf="@id/ConstraintCard2"
+                    card_view:layout_constraintTop_toBottomOf="@id/ImageWhatsapp" />
+
+                <TextView
+                    android:id="@+id/TextContacto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contacto"
+                    android:textSize="24sp"
+                    android:textStyle="italic"
+                    card_view:layout_constraintBottom_toTopOf="@id/ImageInstagram"
+                    card_view:layout_constraintLeft_toLeftOf="@id/ConstraintCard2"
+                    card_view:layout_constraintRight_toRightOf="@id/ConstraintCard2"
+                    card_view:layout_constraintTop_toTopOf="@id/ConstraintCard2" />
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/Card3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="6dp"
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:layout_constraintBottom_toBottomOf="@id/ConstrainCards"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@id/Card2">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ConstraintCard3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/TextEncuentranos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Encuentranos en"
+                    android:textStyle="italic"
+                    card_view:layout_constraintBottom_toTopOf="@id/TextDireccion"
+                    card_view:layout_constraintLeft_toLeftOf="@id/ConstraintCard3"
+                    card_view:layout_constraintRight_toRightOf="@id/ConstraintCard3"
+                    card_view:layout_constraintTop_toTopOf="@id/ConstraintCard3" />
+
+                <TextView
+                    android:id="@+id/TextDireccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Av. Cesar Canevaro N° 476- San Juan de Miraflores"
+                    card_view:layout_constraintBottom_toBottomOf="@id/ConstraintCard3"
+                    card_view:layout_constraintLeft_toLeftOf="@id/ConstraintCard3"
+                    card_view:layout_constraintRight_toRightOf="@id/ConstraintCard3"
+                    card_view:layout_constraintTop_toBottomOf="@id/TextEncuentranos" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
